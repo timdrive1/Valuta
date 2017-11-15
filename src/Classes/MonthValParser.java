@@ -8,11 +8,16 @@ import java.util.ArrayList;
 
 import static java.lang.Double.parseDouble;
 
-public class Parser {
-    static ArrayList<DayVal> dayVals = new ArrayList<>();
-    public static void run() {
+public class MonthValParser {
+
+    static ArrayList<DayVal> monthVals = new ArrayList<>();
+
+
+
+
+    public static ArrayList<DayVal> run() {
         String[] val;
-        String csvFile = "day.csv";
+        String csvFile = "month.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ";";
@@ -24,12 +29,12 @@ public class Parser {
             while ((line = br.readLine()) != null) {
                 if(x!=0) {
                     val = line.split(cvsSplitBy);
-                    dayVals.add(new DayVal(val[0], val[1], parseDouble(val[5]), Integer.parseInt(val[8])));
+                    monthVals.add(new DayVal(val[0], val[1], parseDouble(val[5]), Integer.parseInt(val[8])));
 
                 }
                 x++;
             }
-            System.out.println(dayVals.get(1).toString());
+
 
 
 
@@ -48,9 +53,7 @@ public class Parser {
             }
         }
 
+        return monthVals;
     }
 
-    public static void main(String[] args) {
-        run();
-    }
 }
