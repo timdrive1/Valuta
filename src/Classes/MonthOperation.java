@@ -1,6 +1,7 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class MonthOperation {
     MonthValParser mo = new MonthValParser();
@@ -12,10 +13,11 @@ public class MonthOperation {
     }
 
     public ArrayList<String> getVal(){
+        HashSet<String> hesh = new HashSet<>();
         for (int i = 0; i < arrmo.size() ; i++) {
-            val.add(arrmo.get(i).val);
+            hesh.add(arrmo.get(i).val);
         }
-
+        val = new ArrayList<>(hesh);
         return val;
     }
 
@@ -35,5 +37,7 @@ public class MonthOperation {
             }
         }
     }
+
+
 
 }
