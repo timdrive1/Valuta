@@ -8,8 +8,20 @@ public class MonthOperation {
     ArrayList<DayVal> arrmo = mo.run();
     ArrayList<String> val = new ArrayList<>();
 
+
     public ArrayList<DayVal> getArrmo() {
         return arrmo;
+    }
+
+
+    public ArrayList<DayVal> getArmotmp(String name) {
+        ArrayList<DayVal> tmp = new ArrayList<>();
+        for (int i = 0; i < arrmo.size()  ; i++) {
+            if (arrmo.get(i).getVal().equals(name)){
+                tmp.add(arrmo.get(i));
+            }
+        }
+        return tmp;
     }
 
     public ArrayList<String> getVal(){
@@ -37,7 +49,37 @@ public class MonthOperation {
             }
         }
     }
+    public ArrayList<String> getDateforVal(String nameval){
+        ArrayList<String> dates = new ArrayList<>();
+        for (int i = 0; i < arrmo.size() ; i++) {
+            if(arrmo.get(i).getVal().equals(nameval)){
+                dates.add(arrmo.get(i).date);
+            }
 
+        }
+        return dates;
+    }
+
+    public ArrayList<Double> getCostforVal(String nameval){
+        ArrayList<Double> costs = new ArrayList<>();
+        for (int i = 0; i < arrmo.size() ; i++) {
+            if(arrmo.get(i).getVal().equals(nameval)){
+                costs.add(arrmo.get(i).cost);
+            }
+
+        }
+        return costs;
+    }
+    public ArrayList<Integer> getNomsforVal(String nameval){
+        ArrayList<Integer> noms = new ArrayList<>();
+        for (int i = 0; i < arrmo.size() ; i++) {
+            if(arrmo.get(i).getVal().equals(nameval)){
+                noms.add(arrmo.get(i).nom);
+            }
+
+        }
+        return noms;
+    }
 
 
 }
