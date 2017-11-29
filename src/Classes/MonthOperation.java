@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class MonthOperation {
+    XmlReaderLoopDemo xmlReaderLoopDemo = new XmlReaderLoopDemo();
     MonthValParser mo = new MonthValParser();
     ArrayList<DayVal> arrmo = mo.run();
+
+    public ArrayList<DayVal> getXmlDayVal() {
+        return xmlDayVal;
+    }
+
     ArrayList<String> val = new ArrayList<>();
+    ArrayList<DayVal> xmlDayVal = xmlReaderLoopDemo.xmlReader();
 
 
     public ArrayList<DayVal> getArrmo() {
         return arrmo;
     }
+
+
 
 
     public ArrayList<DayVal> getArmotmp(String name) {
@@ -30,6 +39,15 @@ public class MonthOperation {
             hesh.add(arrmo.get(i).val);
         }
         val = new ArrayList<>(hesh);
+        for (int i = 0; i < xmlDayVal.size() ; i++) {
+            for (int j = 0; j < val.size() ; j++) {
+                if(xmlDayVal.get(i).getVal().equals(val.get(j))){
+                    val.set(j, xmlDayVal.get(i).nameVal);
+
+                }
+            }
+
+        }
         return val;
     }
 

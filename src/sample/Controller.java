@@ -37,7 +37,9 @@ public class Controller {
 
         List<String> list = new ArrayList<String>();
         list = mo.getVal();
+        observableList = FXCollections.observableList(mo.getArmotmp("USD"));
         ObservableList obList = FXCollections.observableList(list);
+       // observableList = obList;
         choiceBox.getItems().clear();
         choiceBox.setItems(obList);
         List<DayVal> dvlist = new ArrayList<>();
@@ -60,13 +62,28 @@ public class Controller {
 
     @FXML
     public void onClick(){
+        ArrayList<DayVal> xmlDayVal = mo.getXmlDayVal();
         String s = choiceBox.getSelectionModel().getSelectedItem().toString();
         ArrayList<DayVal> dayVals = mo.getArrmo();
-        observableList = FXCollections.observableList(mo.getArmotmp(s));
+        System.out.println(searchVal(s, xmlDayVal));
 
+        observableList = FXCollections.observableList(mo.getArmotmp(searchVal(s, xmlDayVal)));
+        tableView.setItems(observableList);
 
         }
 
+
+
+    public String searchVal(String s, ArrayList<DayVal> tmp){
+    String stmp = null;
+        for (int i = 0; i <tmp.size() ; i++) {
+            if(tmp.get(i).getNameVal().equals(s)){
+                stmp = tmp.get(i).getVal();
+            }
+        }
+        return stmp;
+
     }
+}
 
 

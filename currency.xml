@@ -1,0 +1,37 @@
+<SELECT name="tickers" class="s1">
+    <OPTION value="NULL">ALL</OPTION>
+    <OPTION  VALUE="AUD" STYLE="background-color: #FFFFFF;">Австралийский доллар</OPTION>
+    <OPTION  VALUE="AZN" STYLE="background-color: #FFFFFF;">Азербайджанский манат</OPTION>
+    <OPTION  VALUE="AMD" STYLE="background-color: #FFFFFF;">Армянский драм</OPTION>
+    <OPTION  VALUE="BYN" STYLE="background-color: #FFFFFF;">Белорусский рубль</OPTION>
+    <OPTION  VALUE="BGN" STYLE="background-color: #FFFFFF;">Болгарский лев</OPTION>
+    <OPTION  VALUE="BRL" STYLE="background-color: #FFFFFF;">Бразильский реал</OPTION>
+    <OPTION  VALUE="HUF" STYLE="background-color: #FFFFFF;">Венгерский форинт</OPTION>
+    <OPTION  VALUE="KRW" STYLE="background-color: #FFFFFF;">Вона Республики Корея</OPTION>
+    <OPTION  VALUE="HKD" STYLE="background-color: #FFFFFF;">Гонконгский доллар</OPTION>
+    <OPTION  VALUE="DKK" STYLE="background-color: #FFFFFF;">Датская крона</OPTION>
+    <OPTION  VALUE="USD" STYLE="background-color: #FFFFFF;">Доллар США</OPTION>
+    <OPTION  VALUE="EUR" STYLE="background-color: #FFFFFF;">ЕВРО</OPTION>
+    <OPTION  VALUE="INR" STYLE="background-color: #FFFFFF;">Индийская рупия</OPTION>
+    <OPTION  VALUE="KZT" STYLE="background-color: #FFFFFF;">Казахский тенге</OPTION>
+    <OPTION  VALUE="CAD" STYLE="background-color: #FFFFFF;">Канадский доллар</OPTION>
+    <OPTION  VALUE="KGS" STYLE="background-color: #FFFFFF;">Киргизский сом</OPTION>
+    <OPTION  VALUE="CNY" STYLE="background-color: #FFFFFF;">Китайский юань</OPTION>
+    <OPTION  VALUE="MDL" STYLE="background-color: #FFFFFF;">Молдавский лей</OPTION>
+    <OPTION  VALUE="RON" STYLE="background-color: #FFFFFF;">Новый румынский лей</OPTION>
+    <OPTION  VALUE="TMT" STYLE="background-color: #FFFFFF;">Новый туркменский манат</OPTION>
+    <OPTION  VALUE="NOK" STYLE="background-color: #FFFFFF;">Норвежская крона</OPTION>
+    <OPTION  VALUE="PLN" STYLE="background-color: #FFFFFF;">Польский злотый</OPTION>
+    <OPTION  VALUE="XDR" STYLE="background-color: #FFFFFF;">СДР (спец. права заимствования)</OPTION>
+    <OPTION  VALUE="SGD" STYLE="background-color: #FFFFFF;">Сингапурский доллар</OPTION>
+    <OPTION  VALUE="TJS" STYLE="background-color: #FFFFFF;">Таджикский сомони</OPTION>
+    <OPTION  VALUE="TRY" STYLE="background-color: #FFFFFF;">Турецкая лира</OPTION>
+    <OPTION  VALUE="UZS" STYLE="background-color: #FFFFFF;">Узбекский сум</OPTION>
+    <OPTION  VALUE="UAH" STYLE="background-color: #FFFFFF;">Украинская гривна</OPTION>
+    <OPTION  VALUE="GBP" STYLE="background-color: #FFFFFF;">Фунт стерлингов Соед. Корол-ва</OPTION>
+    <OPTION  VALUE="CZK" STYLE="background-color: #FFFFFF;">Чешская крона</OPTION>
+    <OPTION  VALUE="SEK" STYLE="background-color: #FFFFFF;">Шведская крона</OPTION>
+    <OPTION  VALUE="CHF" STYLE="background-color: #FFFFFF;">Швейцарский франк</OPTION>
+    <OPTION  VALUE="ZAR" STYLE="background-color: #FFFFFF;">Южноафриканский рэнд</OPTION>
+    <OPTION  VALUE="JPY" STYLE="background-color: #FFFFFF;">Японская иена</OPTION>
+</SELECT>

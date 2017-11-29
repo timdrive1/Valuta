@@ -4,10 +4,45 @@ import javafx.beans.property.*;
 
 public class DayVal {
     String val;
+    String nameVal;
     String date;
     double cost;
     int nom;
+
+    public String getSval() {
+        return sval.get();
+    }
+
+    public StringProperty svalProperty() {
+        return sval;
+    }
+
+    public String getSdate() {
+        return sdate.get();
+    }
+
+    public StringProperty sdateProperty() {
+        return sdate;
+    }
+
+    public double getScost() {
+        return scost.get();
+    }
+
+    public DoubleProperty scostProperty() {
+        return scost;
+    }
+
+    public int getSnom() {
+        return snom.get();
+    }
+
+    public IntegerProperty snomProperty() {
+        return snom;
+    }
+
     StringProperty sval;
+    StringProperty snameVal;
     StringProperty sdate;
     DoubleProperty scost;
     IntegerProperty snom;
@@ -64,5 +99,16 @@ public class DayVal {
     @Override
     public String toString() {
         return val+" "+ " "+date +" "+ cost + " " +  nom;
+    }
+
+    public void setNameVal(String nameVal) {
+        this.nameVal = nameVal;
+        this.snameVal = new SimpleStringProperty(nameVal);
+    }
+
+
+    public String getNameVal() {
+        return nameVal;
+
     }
 }
