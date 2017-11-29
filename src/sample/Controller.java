@@ -37,7 +37,6 @@ public class Controller {
 
         List<String> list = new ArrayList<String>();
         list = mo.getVal();
-        observableList = FXCollections.observableList(mo.getArmotmp("USD"));
         ObservableList obList = FXCollections.observableList(list);
        // observableList = obList;
         choiceBox.getItems().clear();
@@ -65,7 +64,7 @@ public class Controller {
         ArrayList<DayVal> xmlDayVal = mo.getXmlDayVal();
         String s = choiceBox.getSelectionModel().getSelectedItem().toString();
         ArrayList<DayVal> dayVals = mo.getArrmo();
-        System.out.println(searchVal(s, xmlDayVal));
+
 
         observableList = FXCollections.observableList(mo.getArmotmp(searchVal(s, xmlDayVal)));
         tableView.setItems(observableList);

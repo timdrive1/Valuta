@@ -56,7 +56,6 @@ public class XmlReaderLoopDemo {
             if (tempNode.getNodeType() == Node.ELEMENT_NODE) {
 
 
-                System.out.println("Node Value =" + tempNode.getTextContent());
 
                 if (tempNode.hasAttributes()) {
                     NamedNodeMap nodeMap = tempNode.getAttributes();
