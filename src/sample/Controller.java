@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -31,6 +32,9 @@ public class Controller {
     TableColumn rateColumn = new TableColumn();
     @FXML
     TableColumn denColumn = new TableColumn();
+
+    public Controller() throws IOException {
+    }
 
     @FXML
     public void initialize(){
@@ -60,13 +64,12 @@ public class Controller {
     }
 
     @FXML
-    public void onClick(){
+    public void onClick() throws IOException {
         ArrayList<DayVal> xmlDayVal = mo.getXmlDayVal();
         String s = choiceBox.getSelectionModel().getSelectedItem().toString();
         ArrayList<DayVal> dayVals = mo.getArrmo();
 
-
-        observableList = FXCollections.observableList(mo.getArmotmp(searchVal(s, xmlDayVal)));
+        observableList = FXCollections.observableList(mo.getCursetmp(searchVal(s,xmlDayVal)));/*searchVal(s, xmlDayVal)*/
         tableView.setItems(observableList);
 
         }

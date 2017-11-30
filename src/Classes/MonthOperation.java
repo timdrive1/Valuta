@@ -1,5 +1,6 @@
 package Classes;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -7,6 +8,11 @@ public class MonthOperation {
     XmlReaderLoopDemo xmlReaderLoopDemo = new XmlReaderLoopDemo();
     MonthValParser mo = new MonthValParser();
     ArrayList<DayVal> arrmo = mo.run();
+    API api = new API();
+    ArrayList<Curse> curses;
+
+    public MonthOperation() throws IOException {
+    }
 
     public ArrayList<DayVal> getXmlDayVal() {
         return xmlDayVal;
@@ -21,7 +27,17 @@ public class MonthOperation {
     }
 
 
+    public ArrayList<DayVal> getCursetmp(String val) throws IOException {
+        curses = api.getcurse(val);
+        ArrayList<DayVal> tmp = new ArrayList<>();
+        for (int i = 0; i < curses.size()  ; i++) {
 
+                tmp.add(new DayVal(curses.get(i).key  , curses.get(i).key, curses.get(i).curse, 1 ));
+
+        }
+        return tmp;
+
+    }
 
     public ArrayList<DayVal> getArmotmp(String name) {
         ArrayList<DayVal> tmp = new ArrayList<>();

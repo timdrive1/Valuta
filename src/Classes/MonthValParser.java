@@ -17,7 +17,7 @@ public class MonthValParser {
 
     public static ArrayList<DayVal> run() {
         String[] val;
-        String csvFile = "month.csv";
+        String csvFile = "UR.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ";";
